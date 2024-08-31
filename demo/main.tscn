@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://cg461idp2mht2"]
+
+[ext_resource type="Texture2D" uid="uid://cmovtxwx7yxqt" path="res://icon.svg" id="1_jrc4j"]
+[ext_resource type="Script" path="res://main.gd" id="1_phc8c"]
+[ext_resource type="Script" path="res://player.gd" id="2_sk7yu"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gdys0"]
+radius = 66.5828
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_phc8c")
+
+[node name="Player" type="SoftCollider" parent="."]
+push_strength = 10000.0
+position = Vector2(544, 280)
+script = ExtResource("2_sk7yu")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = ExtResource("1_jrc4j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CircleShape2D_gdys0")
+
+[node name="SoftCollider4" type="SoftCollider" parent="."]
+push_strength = 10000.0
+position = Vector2(544, 280)
+
+[node name="Sprite2D" type="Sprite2D" parent="SoftCollider4"]
+texture = ExtResource("1_jrc4j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoftCollider4"]
+shape = SubResource("CircleShape2D_gdys0")
+
+[node name="SoftCollider3" type="SoftCollider" parent="."]
+push_strength = 10000.0
+position = Vector2(648, 232)
+
+[node name="Sprite2D" type="Sprite2D" parent="SoftCollider3"]
+texture = ExtResource("1_jrc4j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoftCollider3"]
+shape = SubResource("CircleShape2D_gdys0")
+
+[node name="SoftCollider2" type="SoftCollider" parent="."]
+push_strength = 10000.0
+position = Vector2(586.425, 300.585)
+
+[node name="Sprite2D" type="Sprite2D" parent="SoftCollider2"]
+texture = ExtResource("1_jrc4j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SoftCollider2"]
+shape = SubResource("CircleShape2D_gdys0")
